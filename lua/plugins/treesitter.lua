@@ -3,10 +3,6 @@ return {
   version = false,
   build = ":TSUpdate",
   event = "BufReadPost",
-  keys = {
-    {"<c-space>", desc = "Increment selection"},
-    {"<bs>", desc = "Shrink selection", mode = "x"},
-  },
   config = function()
     require("nvim-treesitter.configs").setup({
       ensure_installed = {

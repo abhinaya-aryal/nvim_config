@@ -10,12 +10,11 @@ return {
         close_command = "Bdelete! %d",
         right_moue_command = "Bdelete! %d",
         diagnostics = "nvim_lsp",
-        separator_style = "thin",
+        separator_style = "thick",
         offsets = {
           {
-            filetype = "Nvimtree",
-            highlight = "Directory",
-            separator = true,
+            filetype = "NvimTree",
+            text = "",
             padding = 1,
           },
         },

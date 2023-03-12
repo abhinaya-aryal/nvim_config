@@ -5,20 +5,22 @@ return {
 		local diagnostics = {
 			"diagnostics",
 			sources = { "nvim_diagnostic" },
-			sections = {"error", "warn" },
-			symbols = { error = " ", warn = " " },
+			sections = {"error", "warn", "info", "hint" },
+      symbols = {error = " ", warn = " ", hint = " ", info = "󰋼 "},
 			colored = true,
-			always_visible = true,
+      update_in_insert = true,
+			always_visible = false,
 		}
 
 		local diff = {
 			"diff",
 			colored = true,
-			symbols = { added = " ", modified = " ", removed = " " },
+      symbols = { added = " ", modified = " ", removed = " " },
 		}
 
 		local filetype = {
 			"filetype",
+      colored = true,
 			icons_enabled = true,
 		}
 
@@ -43,7 +45,7 @@ return {
 				lualine_a = { "mode" },
 				lualine_b = { "branch" },
 				lualine_c = { diagnostics },
-				lualine_x = { diff, spaces, "encoding", filetype },
+				lualine_x = { diff, filetype },
 				lualine_y = { location },
 				lualine_z = { "progress" },
 			},

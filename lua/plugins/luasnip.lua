@@ -5,5 +5,9 @@ return {
   },
   config = function()
     require("luasnip.loaders.from_vscode").lazy_load()
-  end
+  end,
+  opts = {
+    history = true,
+    delete_check_events = "TextChanged",
+  },
 }
