@@ -104,8 +104,9 @@ return {
 
 		local sources = {
 			b.diagnostics.codespell,
+			-- b.diagnostics.misspell,
 			b.code_actions.cspell,
-			b.diagnostics.cspell,
+			-- b.diagnostics.cspell,
 			b.diagnostics.write_good,
 			b.code_actions.proselint,
 			b.formatting.rustywind,
@@ -154,6 +155,8 @@ return {
 					"typescript",
 					"typescriptreact",
 					"svelte",
+					"html",
+					"css",
 				},
 				condition = function()
 					return not rome_config_exists() and not deno_config_exists()
@@ -175,6 +178,7 @@ return {
 	end,
 	keys = {
 		{ "<leader>m", "<cmd>Mason<cr>", desc = "Mason" },
+		{ "<leader>l", "<cmd><esc>", desc = "LSP" },
 		{ "<leader>li", "<cmd>LspInfo<cr>", desc = "LspInfo" },
 	},
 }

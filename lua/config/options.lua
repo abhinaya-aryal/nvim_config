@@ -9,6 +9,7 @@ local opt = vim.opt
 
 opt.autowrite = true -- Enable auto write
 opt.backup = false -- don't create a backup file
+opt.background = "dark"
 opt.cmdheight = 1 -- more spaces in the neovim command line for displaying messages
 opt.clipboard = "unnamedplus" -- Sync with system clipboard
 opt.completeopt = { "menuone", "noselect" }
@@ -21,6 +22,7 @@ opt.fillchars.eob = " " --show empty lines at the end of a buffer as space defau
 opt.formatoptions = "jcroqlnt" -- tcqj
 opt.grepformat = "%f:%l:%c:%m"
 opt.grepprg = "rg --vimgrep"
+opt.hidden = true
 opt.hlsearch = true -- highlight all matches on previous search pattern
 opt.ignorecase = true -- Ignore case
 opt.inccommand = "nosplit" --preview incremental substitute
@@ -57,7 +59,7 @@ opt.undofile = true
 opt.undolevels = 500
 opt.updatetime = 300 -- save swap file and trigger cursorHold
 opt.wildmode = "longest:full,full" -- command-line completion mode
-opt.winminwidth = 5 -- minumum window width
+opt.winminwidth = 5 -- minimum window width
 opt.wrap = true -- disable line wrap
 opt.writebackup = false
 
@@ -67,3 +69,8 @@ if vim.fn.has("nvim-0.9.0") == 1 then
 end
 
 vim.g.markdown_recommended_style = 0 -- fix markdown indentation settings
+
+vim.cmd([[
+filetype plugin indent on
+syntax on 
+]])
