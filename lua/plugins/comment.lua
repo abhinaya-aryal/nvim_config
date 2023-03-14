@@ -6,7 +6,7 @@ return {
   end,
   keys = {
     {
-      "<leader>/", "<cmd>lua require('Comment.api').toggle.linewise.current()<cr>", desc = "Change a line into commit", mode = { "n", "x" }
+      "<leader>/", "<cmd>lua require('Comment.api').toggle.linewise.current()<cr>", desc = "Comment Line", mode = { "n", "x" }
     },
   },
 }

@@ -2,7 +2,7 @@ return {
   "nvim-treesitter/nvim-treesitter",
   version = false,
   build = ":TSUpdate",
-  event = "BufReadPost",
+  event = { "BufReadPost", "BufNewFile"},
   config = function()
     require("nvim-treesitter.configs").setup({
       ensure_installed = {
@@ -28,7 +28,23 @@ return {
       autopairs = {
         enable = true,
       },
-      indent = {enable = true, disable = {"python", "css"}},
+      autotag = {
+        enable = true,
+        filetypes = {
+          "html",
+          "javascript",
+          "typescript",
+          "javascriptreact",
+          "typescriptreact",
+          "svelte",
+          "vue",
+          "tsx",
+          "jsx",
+          "js",
+          "markdown",
+        },
+      },
+      indent = {enable = true },
       context_commentstring = {
         enable = true,
         enable_autocmd = false,

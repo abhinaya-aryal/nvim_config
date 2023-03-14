@@ -13,7 +13,8 @@ return {
         separator_style = "thick",
         offsets = {
           {
-            filetype = "NvimTree",
+            filetype = "NeoTree",
+            hightlight = "Directory",
             text = "",
             padding = 1,
           },

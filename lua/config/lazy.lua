@@ -11,12 +11,16 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+
 require("lazy").setup("plugins", {
+  ui = {
+    border = "rounded",
+  },
 	defaults = {
 		lazy = true,
 		version = false, --always use the latest git commit
 	},
-	install = { missing = true, colorscheme = { "tokyonight", "habamax" } },
+	install = { missing = true, colorscheme = { "tokyonight" } },
 	checker = { enabled = true }, -- automatically check for plugin updates
 	  performance = {
 		  rtp = {
@@ -34,4 +38,4 @@ require("lazy").setup("plugins", {
 	  }
 })
 
-vim.keymap.set("n", "<leader>z", "<cmd>:Lazy<cr>", {desc = "Plugin Manager" })
+vim.keymap.set("n", "<leader>z", "<cmd>Lazy<cr>", {desc = "Lazy" })

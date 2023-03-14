@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
---disable netrw file explorer 
+--disable netrw file explorer
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
@@ -11,7 +11,7 @@ opt.autowrite = true -- Enable auto write
 opt.backup = false -- don't create a backup file
 opt.cmdheight = 1 -- more spaces in the neovim command line for displaying messages
 opt.clipboard = "unnamedplus" -- Sync with system clipboard
-opt.completeopt = {"menuone", "noselect"}
+opt.completeopt = { "menuone", "noselect" }
 opt.conceallevel = 0 -- Hide * markup for bold and italic
 opt.confirm = true -- confirm to save changes before exiting modified buffer
 opt.cursorline = true -- Enable highlighting of the current line
@@ -21,7 +21,7 @@ opt.fillchars.eob = " " --show empty lines at the end of a buffer as space defau
 opt.formatoptions = "jcroqlnt" -- tcqj
 opt.grepformat = "%f:%l:%c:%m"
 opt.grepprg = "rg --vimgrep"
-opt.hlsearch = true -- highlight all matches on preivous search pattern
+opt.hlsearch = true -- highlight all matches on previous search pattern
 opt.ignorecase = true -- Ignore case
 opt.inccommand = "nosplit" --preview incremental substitute
 opt.iskeyword:append("-") --treats word with - as single word
@@ -38,7 +38,7 @@ opt.scrolloff = 6 -- Lines of context
 opt.sessionoptions = { "buffers", "curdir", "tabpages", "winsize" }
 opt.shiftround = true -- round indent
 opt.shiftwidth = 2 -- size of an indent
-opt.shortmess:append { W = true, I = true, c = true }
+opt.shortmess:append({ W = true, I = true, c = true })
 opt.showmode = false -- Don't show mode since we have a statusline
 opt.showtabline = 0
 opt.showcmd = false
@@ -63,7 +63,7 @@ opt.writebackup = false
 
 if vim.fn.has("nvim-0.9.0") == 1 then
 	opt.splitkeep = "screen"
-	opt.shortmess:append { C = true }
+	opt.shortmess:append({ C = true })
 end
 
 vim.g.markdown_recommended_style = 0 -- fix markdown indentation settings

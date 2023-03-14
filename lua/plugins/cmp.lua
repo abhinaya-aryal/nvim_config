@@ -10,13 +10,19 @@ return {
   },
   config = function()
     local snippet = require("luasnip")
-    require("luasnip/loaders/from_vscode").lazy_load()
+    snippet.filetype_extend("javascriptreact", {"html"})
+
+    local check_backspace = function()
+      local col = vim.fn.col "." - 1
+      return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
+    end
+
     local tabnine = require("cmp_tabnine.config")
     tabnine:setup {
       max_lines = 1000,
       max_num_results = 20,
-      sort = true, 
-      run_on_every_keystroke = true, 
+      sort = true,
+      run_on_every_keystroke = true,
       snippet_placeholder = "..",
       ignored_file_types = {
         -- lua
@@ -57,7 +63,7 @@ return {
       preselect = cmp.PreselectMode.None,
       snippet = {
         expand = function(args)
-          luasnip.lsp_expand(args.body) -- for 'luasnip' users
+          snippet.lsp_expand(args.body) -- for 'luasnip' users
         end,
       },
       window = {
@@ -65,13 +71,44 @@ return {
         documentation = cmp.config.window.bordered(),
       },
       mapping = cmp.mapping.preset.insert({
-        ["<Tab>"] = cmp.mapping.select_next_item(),
-        ["<s-Tab>"] = cmp.mapping.select_prev_item(),
+        ["<c-j>"] = cmp.mapping.select_next_item(),
+        ["<c-k>"] = cmp.mapping.select_prev_item(),
         ["<C-b>"] = cmp.mapping.scroll_docs(-4),
         ["<C-f>"] = cmp.mapping.scroll_docs(4),
         ['<C-Space>'] = cmp.mapping.complete(),
-        ['<C-e>'] = cmp.mapping.abort(),
+        ['<C-e>'] = cmp.mapping {
+          i = cmp.mapping.abort(),
+          c = cmp.mapping.close(),
+        },
         ['<CR>'] = cmp.mapping.confirm({ select = true }),
+["<Tab>"] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
+      elseif snippet.expandable() then
+        snippet.expand()
+      elseif snippet.expand_or_jumpable() then
+        snippet.expand_or_jump()
+      elseif check_backspace() then
+        fallback()
+      else
+        fallback()
+      end
+    end, {
+      "i",
+      "s",
+    }),
+    ["<S-Tab>"] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_prev_item()
+      elseif snippet.jumpable(-1) then
+        snippet.jump(-1)
+      else
+        fallback()
+      end
+    end, {
+      "i",
+      "s",
+    }),
       }),
       sources = {
         { name = "nvim_lsp", keyword_length = 3 },
