@@ -1,26 +1,26 @@
-return { 
+return {
 	"nvim-lualine/lualine.nvim",
 	event = "VeryLazy",
 	config = function()
 		local diagnostics = {
 			"diagnostics",
 			sources = { "nvim_diagnostic" },
-			sections = {"error", "warn", "info", "hint" },
-      symbols = {error = " ", warn = " ", hint = " ", info = "󰋼 "},
+			sections = { "error", "warn", "info", "hint" },
+			symbols = { error = " ", warn = " ", hint = " ", info = "󰋼 " },
 			colored = true,
-      update_in_insert = true,
-			always_visible = false,
+			update_in_insert = true,
+			always_visible = true,
 		}
 
 		local diff = {
 			"diff",
 			colored = true,
-      symbols = { added = " ", modified = " ", removed = " " },
+			symbols = { added = " ", modified = " ", removed = " " },
 		}
 
 		local filetype = {
 			"filetype",
-      colored = true,
+			colored = true,
 			icons_enabled = true,
 		}
 
@@ -28,11 +28,6 @@ return {
 			"location",
 			padding = 0,
 		}
-
-		local spaces = function() 
-			return "spaces: " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
-		end
-		
 		require("lualine").setup({
 			options = {
 				globalstatus = true,
@@ -49,7 +44,6 @@ return {
 				lualine_y = { location },
 				lualine_z = { "progress" },
 			},
-			})
-	end
+		})
+	end,
 }
-	

@@ -6,12 +6,6 @@ return {
 		{ "williamboman/mason-lspconfig.nvim" },
 		{ "jose-elias-alvarez/null-ls.nvim" },
 		{ "lukas-reineke/lsp-format.nvim" },
-		{
-			"glepnir/lspsaga.nvim",
-			config = function()
-				require("lspsaga").setup({})
-			end,
-		},
 	},
 	config = function()
 		local on_attach = require("config.handlers").on_attach
