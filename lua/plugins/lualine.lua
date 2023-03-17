@@ -9,7 +9,7 @@ return {
 			symbols = { error = " ", warn = " ", hint = " ", info = "󰋼 " },
 			colored = true,
 			update_in_insert = true,
-			always_visible = true,
+			always_visible = false,
 		}
 
 		local diff = {
@@ -32,7 +32,7 @@ return {
 			options = {
 				globalstatus = true,
 				icons_enabled = true,
-				theme = "auto",
+				theme = "tokyonight",
 				disabled_filetypes = { "alpha", "dashboard" },
 				always_divisible_middle = true,
 			},

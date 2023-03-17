@@ -157,7 +157,7 @@ return {
 				end,
 			}),
 			b.formatting.stylua,
-			b.formatting.rustfmt,
+			-- b.formatting.rustfmt,
 			b.formatting.gofmt,
 			b.diagnostics.revive,
 			b.diagnostics.protolint,
