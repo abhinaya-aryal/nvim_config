@@ -7,15 +7,19 @@ return {
 	config = function()
 		require("bufferline").setup({
 			options = {
-				close_command = "Bdelete! %d",
-				right_moue_command = "Bdelete! %d",
+				close_command = "Bwipeout! %d",
+				right_moue_command = "Bwipeout! %d",
 				diagnostics = "nvim_lsp",
-				separator_style = "thick",
+				diagnostics_indicator = function(count, level)
+					local icon = level:match("error") and " " or ""
+					return " " .. icon .. count
+				end,
+				separator_style = "padded_slant",
 				offsets = {
 					{
 						filetype = "NvimTree",
 						highlight = "Directory",
-						text = "",
+						text = "File Explorer",
 						padding = 1,
 					},
 				},

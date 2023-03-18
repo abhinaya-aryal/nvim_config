@@ -29,10 +29,7 @@ keymap("n", "<c-c>", ":%y+<CR>", opts)
 -- INFO: Save file
 keymap("n", "<leader>u", "<cmd>update<cr>", { silent = true, desc = "Update File" })
 
--- INFO: Save and close buffer
-keymap("n", "<c-s>", "<cmd>update<cr><cmd>Bdelete!<cr>", opts)
-
--- INFO: Enter Normal mode from insert mode and visula mode
+-- INFO: Enter Normal mode from insert mode and visual mode
 keymap("i", "jk", "<ESC>", opts)
 keymap("v", "jk", "<ESC>", opts)
 

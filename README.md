@@ -55,14 +55,14 @@ And then press enter..
 - and other required dependencies plugins for these...
 
 ## KeyBindings
-Most of the keybindings are set up with the `<leader>` i.e. `<space>` key prefix. So, the beginner do not need to remember key shortcuts. When, you are in normal mode, pressing <space> once will open up a which-key menu.
+Most of the keybindings are set up with the `<leader>` i.e. `<space>` key prefix so that which-key plugin can help us to find the desired key shortcuts. The benefit is beginner do not need to remember key shortcuts. When, you are in normal mode, pressing `<space>` once will open up a which-key menu.
 
 All the configured custom keymap are listed below:-
 - Tricky one, for fastwrap provided by nvim-autopairs
 ```
-| Before | Input | After|
-| -------------- | --------------- | ----------------|
-| (|foobar | <Alt-e> then press a | (|foobar) |
-| (|)(foobar) | <Alt-e> then press q | (|(foobar))
+| Before      | Input                | After       |
+| ----------- | -------------------- | ----------- |
+| (|foobar    | <Alt-e> then press a | (|foobar)   |
+| (|)(foobar) | <Alt-e> then press q | (|(foobar)) |
 ```
 
