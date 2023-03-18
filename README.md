@@ -24,7 +24,7 @@ And then press enter..
 - `ripgrep` needs to be available on the system
 
 ## Integrated Plugins
-- [alpha-nvim] (https://github.com/goolord/alpha-nvim)
+- [alpha-nvim] (https://www.github.com/goolord/alpha-nvim)
 - [nvim-autopairs] (https://github.com/windwp/nvim-autopairs)
 - [nvim-ts-autotag] (https://github.com/windwp/nvim-ts-autotag)
 - [indent-blanklilne.nvim] (https://github.com/lukas-reineke/indent-blankline.nvim)
@@ -53,4 +53,16 @@ And then press enter..
 - [trouble.nvim] (https://github.com/folke/trouble.nvim)
 - [which-key.nvim] (https://github.com/folke/which-key.nvim)
 - and other required dependencies plugins for these...
+
+## KeyBindings
+Most of the keybindings are set up with the `<leader>` i.e. `<space>` key prefix. So, the beginner do not need to remember key shortcuts. When, you are in normal mode, pressing <space> once will open up a which-key menu.
+
+All the configured custom keymap are listed below:-
+- Tricky one, for fastwrap provided by nvim-autopairs
+```
+| Before | Input | After|
+| -------------- | --------------- | ----------------|
+| (|foobar | <Alt-e> then press a | (|foobar) |
+| (|)(foobar) | <Alt-e> then press q | (|(foobar))
+```
 
