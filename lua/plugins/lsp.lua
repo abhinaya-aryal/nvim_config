@@ -1,7 +1,8 @@
 return {
 	"neovim/nvim-lspconfig",
-	event = { "BufReadPost", "BufNewFile" },
+	event = { "BufAdd", "BufNewFile" },
 	dependencies = {
+		{ "hrsh7th/cmp-nvim-lsp" },
 		{ "williamboman/mason.nvim" },
 		{ "williamboman/mason-lspconfig.nvim" },
 		{ "jose-elias-alvarez/null-ls.nvim" },
@@ -67,6 +68,9 @@ return {
 				})
 			end,
 		})
+
+		require("config.handlers").setup()
+
 		local null_ls = require("null-ls")
 		local b = null_ls.builtins
 		local function eslint_config_exists()

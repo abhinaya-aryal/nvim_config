@@ -1,6 +1,6 @@
 return {
 	"windwp/nvim-autopairs",
-	event = "VeryLazy",
+	event = "BufAdd",
 	config = function()
 		require("nvim-autopairs").setup({
 			check_ts = true, --treesitter integration
@@ -23,4 +23,3 @@ return {
 		})
 	end,
 }
-

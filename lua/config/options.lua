@@ -41,7 +41,7 @@ opt.scrolloff = 6 -- Lines of context
 opt.sessionoptions = { "buffers", "curdir", "tabpages", "winsize" }
 opt.shiftround = true -- round indent
 opt.shiftwidth = 2 -- size of an indent
-opt.shortmess:append({ W = true, I = true, c = true })
+-- opt.shortmess:append({ W = true, I = true, c = true })
 opt.showmode = false -- Don't show mode since we have a statusline
 opt.showtabline = 1
 opt.showcmd = false
@@ -66,7 +66,7 @@ opt.writebackup = false
 
 if vim.fn.has("nvim-0.9.0") == 1 then
 	opt.splitkeep = "screen"
-	opt.shortmess:append({ C = true })
+	opt.shortmess:append({ c = true })
 end
 
 vim.g.markdown_recommended_style = 0 -- fix markdown indentation settings

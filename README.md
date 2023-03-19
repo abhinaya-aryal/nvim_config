@@ -35,7 +35,7 @@ And then press enter..
 - [tokyonight.nvim] (https://github.com/folke/tokyonight.nvim)
 - [Comment.nvim] (https://github.com/numToStr/Comment.nvim)
 - [diffview.nvim] (https://github.com/sindrets/diffview.nvim)
-- [gitsigns.nivm] (https://github.com/lewis6991/gitsigns.nvim)
+- [gitsigns.nvim] (https://github.com/lewis6991/gitsigns.nvim)
 - [vim-illuminate] (https://github.com/RRethy/vim-illuminate)
 - [impatient.nvim] (https://github.com/lewis6991/impatient.nvim)
 - [mason.nvim] (https://github.com/williamboman/mason.nvim)
@@ -77,7 +77,7 @@ All the configured custom keymap are listed below (Note: Builtin shortcuts of vi
 - `<Ctrl-c>` - Copy whole file content to clipboard
 - `p` - Paste in visual mode
 
-- `nn` - Enter normal mode from insert and visual mode 
+- `ij` - Enter normal mode from insert and visual mode 
 
 - `<` - Indent left in visual mode
 - `>` - Indent right in visual mode

@@ -1,8 +1,8 @@
 return {
 	"akinsho/bufferline.nvim",
-	event = "VeryLazy",
+	event = "VimEnter",
 	dependencies = {
-		{ "nvim-tree/nvim-web-devicons", lazy = true },
+		{ "nvim-tree/nvim-web-devicons" },
 	},
 	config = function()
 		require("bufferline").setup({
@@ -23,7 +23,7 @@ return {
 						padding = 1,
 					},
 				},
-				highlights = {
+				--[[ highlights = {
 					fill = {
 						fg = { attribute = "fg", highlight = "#ff0000" },
 						bg = { attribute = "bg", highlight = "TabLine" },
@@ -112,6 +112,7 @@ return {
 						bg = { attribute = "bg", highlight = "Normal" },
 					},
 				},
+        --]]
 			},
 		})
 	end,

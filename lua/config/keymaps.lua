@@ -27,8 +27,8 @@ keymap("n", "<c-c>", ":%y+<CR>", opts)
 keymap("n", "<leader>u", "<cmd>update<cr>", { silent = true, desc = "Update File" })
 
 -- INFO: Enter Normal mode from insert mode and visual mode
-keymap("i", "nn", "<ESC>", opts)
-keymap("v", "nn", "<ESC>", opts)
+keymap("i", "ij", "<ESC>", opts)
+keymap("v", "ij", "<ESC>", opts)
 
 -- INFO: Indentation in visual mode
 keymap("v", "<", "<gv", opts)

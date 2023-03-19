@@ -3,9 +3,11 @@ return {
 	event = "InsertEnter",
 	dependencies = {
 		{ "hrsh7th/cmp-buffer" }, -- buffer completion
+		{ "hrsh7th/cmp-nvim-lsp" },
+		{ "hrsh7th/cmp-nvim-lua" },
+		{ "hrsh7th/cmp-nvim-lsp-signature-help" },
 		{ "hrsh7th/cmp-path" }, --path completions
 		{ "hrsh7th/cmp-cmdline" },
-		{ "hrsh7th/cmp-nvim-lsp" },
 		{ "saadparwaiz1/cmp_luasnip" },
 		{ "tzachar/cmp-tabnine", build = "./install.sh" },
 	},
@@ -29,6 +31,7 @@ return {
 				-- lua = true,
 			},
 		})
+
 		local kind_icons = {
 			Text = "",
 			Method = "",
@@ -110,17 +113,15 @@ return {
 					"s",
 				}),
 			}),
-			sources = cmp.config.sources({
+			sources = {
 				{ name = "nvim_lsp" },
 				{ name = "luasnip" },
-				-- { name = "nvim_lua" },
-				{ name = "cmp_tabnine" },
-				{ name = "buffer" },
+				{ name = "nvim_lsp_signature_help" },
+				{ name = "nvim_lua" },
 				{ name = "path" },
-			}, {
 				{ name = "buffer" },
-			}),
-
+				{ name = "cmp_tabnine" },
+			},
 			formatting = {
 				fields = { "kind", "abbr", "menu" },
 				format = function(entry, vim_item)
@@ -133,7 +134,7 @@ return {
 					vim_item.menu = ({
 						nvim_lsp = "[Lsp]",
 						luasnip = "[LuaSnip]",
-						-- nvim_lua = "[Lua]",
+						nvim_lua = "[Nvim_Lua]",
 						cmp_tabnine = "[Tabnine]",
 						buffer = "[Buffer]",
 						path = "[Path]",
