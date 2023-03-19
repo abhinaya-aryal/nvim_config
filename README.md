@@ -90,6 +90,9 @@ All the configured custom keymap are listed below (Note: Builtin shortcuts of vi
 - `<Space>q` - Write the current buffer to disk and close it.
 - `<Alt-n>` - Move to next highlighted word 
 - `<Alt-p>` - Move to previous highlighted word
+- `gcc` - Toggle linewise comment provided by [Comment.nvim](https://github.com/numToStr/Comment.nvim)
+- `gbc` - Toggle linewise comment provided by [Comment.nvim](https://github.com/numToStr/Comment.nvim)
+  - `<n>gcc` - Toggle <n> = {any number} line with linewise comment. Same for `gbc` too, but the comment syntax will use multi-line or block-wise comment.
 
 
 - Tricky one, for fastwrap provided by nvim-autopairs
@@ -99,7 +102,7 @@ All the configured custom keymap are listed below (Note: Builtin shortcuts of vi
 | (|foobar    | <Alt-e> then press a | (|foobar)   |
 | (|)(foobar) | <Alt-e> then press q | (|(foobar)) |
 ```
-There are many more that are binded with which-key. After a bit of hitting space key, which-key menu will popup with available key bindings. Shortcuts are also available in `nvim-tree` too. When you are in nvim-tree, just press `?`, and that will show all the available keymaps. 
+  There are many more that are binded with which-key. After a bit of hitting space key, which-key menu will popup with available key bindings. Shortcuts are also available in `nvim-tree` too. When you are in nvim-tree, just press `?`, and that will show all the available keymaps. 
 
 ## Customizing Your Preference
 Mostly, you don't need to change the config folder for plugin related settings. You can add a new plugin by creating a new file in plugins folder. Refer to `lazy.nvim` for more details. The keybindings related to the plugin are in their own plugin file. Open up the specific plugin file and change the keys table as your wish to map shortcuts. 
