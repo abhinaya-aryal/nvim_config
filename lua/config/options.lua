@@ -12,7 +12,7 @@ opt.backup = false -- don't create a backup file
 opt.background = "dark"
 opt.cmdheight = 1 -- more spaces in the neovim command line for displaying messages
 opt.clipboard = "unnamedplus" -- Sync with system clipboard
-opt.completeopt = { "menu", "menuone", "noselect" }
+opt.completeopt = { "menu", "menuone", "preview", "noselect" }
 opt.conceallevel = 0 -- Hide * markup for bold and italic
 opt.confirm = true -- confirm to save changes before exiting modified buffer
 opt.cursorline = true -- Enable highlighting of the current line
@@ -29,11 +29,12 @@ opt.inccommand = "nosplit" --preview incremental substitute
 opt.iskeyword:append("-") --treats word with - as single word
 opt.laststatus = 3
 opt.list = true -- show some invisible characters (tabs...
-opt.mouse = "a" -- enable mouse mode
+opt.listchars:append("space: ")
+opt.mouse = "nv" -- enable mouse mode "a" for all modes
 opt.number = true -- print line number
 opt.numberwidth = 4
-opt.pumblend = 10 -- popup blend
-opt.pumheight = 10 -- Maximum number of entries in a popup
+opt.pumblend = 15 -- popup blend
+opt.pumheight = 15 -- Maximum number of entries in a popup
 opt.relativenumber = true -- Relative line numbers
 opt.ruler = false
 opt.scrolloff = 6 -- Lines of context
@@ -42,7 +43,7 @@ opt.shiftround = true -- round indent
 opt.shiftwidth = 2 -- size of an indent
 opt.shortmess:append({ W = true, I = true, c = true })
 opt.showmode = false -- Don't show mode since we have a statusline
-opt.showtabline = 0
+opt.showtabline = 1
 opt.showcmd = false
 opt.sidescrolloff = 6 -- columns of context
 opt.signcolumn = "yes" -- always show the signcolumn, otherwise it would shift the text each time
@@ -59,7 +60,7 @@ opt.undofile = true
 opt.undolevels = 500
 opt.updatetime = 300 -- save swap file and trigger cursorHold
 opt.wildmode = "longest:full,full" -- command-line completion mode
-opt.winminwidth = 5 -- minimum window width
+opt.winminwidth = 8 -- minimum window width
 opt.wrap = true -- disable line wrap
 opt.writebackup = false
 

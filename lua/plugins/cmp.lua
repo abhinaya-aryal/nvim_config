@@ -2,7 +2,7 @@ return {
 	"hrsh7th/nvim-cmp",
 	event = "InsertEnter",
 	dependencies = {
-		{ "hrsh7th/cmp-buffer" }, -- buffer completions
+		{ "hrsh7th/cmp-buffer" }, -- buffer completion
 		{ "hrsh7th/cmp-path" }, --path completions
 		{ "hrsh7th/cmp-cmdline" },
 		{ "hrsh7th/cmp-nvim-lsp" },
@@ -113,13 +113,14 @@ return {
 			sources = cmp.config.sources({
 				{ name = "nvim_lsp" },
 				{ name = "luasnip" },
-				{ name = "nvim_lua" },
-				{ name = "cmp_tabnine", keyword_length = 3 },
+				-- { name = "nvim_lua" },
+				{ name = "cmp_tabnine" },
 				{ name = "buffer" },
 				{ name = "path" },
 			}, {
 				{ name = "buffer" },
 			}),
+
 			formatting = {
 				fields = { "kind", "abbr", "menu" },
 				format = function(entry, vim_item)
@@ -132,7 +133,7 @@ return {
 					vim_item.menu = ({
 						nvim_lsp = "[Lsp]",
 						luasnip = "[LuaSnip]",
-						nvim_lua = "[Lua]",
+						-- nvim_lua = "[Lua]",
 						cmp_tabnine = "[Tabnine]",
 						buffer = "[Buffer]",
 						path = "[Path]",

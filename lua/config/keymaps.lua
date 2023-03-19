@@ -17,9 +17,6 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
--- INFO: Clear highlights
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-
 -- INFO: Better paste in visual mode
 keymap("v", "p", '"_dP', opts)
 
@@ -30,8 +27,8 @@ keymap("n", "<c-c>", ":%y+<CR>", opts)
 keymap("n", "<leader>u", "<cmd>update<cr>", { silent = true, desc = "Update File" })
 
 -- INFO: Enter Normal mode from insert mode and visual mode
-keymap("i", "jk", "<ESC>", opts)
-keymap("v", "jk", "<ESC>", opts)
+keymap("i", "nn", "<ESC>", opts)
+keymap("v", "nn", "<ESC>", opts)
 
 -- INFO: Indentation in visual mode
 keymap("v", "<", "<gv", opts)

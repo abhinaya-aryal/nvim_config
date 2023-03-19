@@ -6,6 +6,7 @@ return {
 		{ "williamboman/mason-lspconfig.nvim" },
 		{ "jose-elias-alvarez/null-ls.nvim" },
 		{ "lukas-reineke/lsp-format.nvim" },
+		{ "b0o/schemastore.nvim" },
 	},
 	config = function()
 		local on_attach = require("config.handlers").on_attach
@@ -51,6 +52,16 @@ return {
 							telemetry = {
 								enable = false,
 							},
+						},
+					},
+				})
+			end,
+			["jsonls"] = function()
+				require("lspconfig").jsonls.setup({
+					settings = {
+						json = {
+							schemas = require("schemastore").json.schemas(),
+							validate = { enable = true },
 						},
 					},
 				})
@@ -157,7 +168,7 @@ return {
 				end,
 			}),
 			b.formatting.stylua,
-			-- b.formatting.rustfmt,
+			b.formatting.rustfmt,
 			b.formatting.gofmt,
 			b.diagnostics.revive,
 			b.diagnostics.protolint,

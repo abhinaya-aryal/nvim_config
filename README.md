@@ -44,7 +44,7 @@ And then press enter..
 - [lualine.nvim] (https://github.com/nvim-lualine/lualine.nvim)
 - [LuaSnip] (https://github.com/L3MON4D3/LuaSnip)
 - [vim-matchtag] (https://github.com/leafOfTree/vim-matchtag)
-- [neo-tree.nvim] (https://github.com/nvim-neo-tree/neo-tree.nvim)
+- [nvim-tree.lua] (https://github.com/nvim-tree/nvim-tree.lua)
 - [project.nvim] (https://github.com/ahmedkhalf/project.nvim)
 - [telescope.nvim] (https://github.com/nvim-telescope/telescope.nvim)
 - [todo-comment.nvim] (https://github.com/folke/todo-comments.nvim)
@@ -55,9 +55,39 @@ And then press enter..
 - and other required dependencies plugins for these...
 
 ## KeyBindings
-Most of the keybindings are set up with the `<leader>` i.e. `<space>` key prefix so that which-key plugin can help us to find the desired key shortcuts. The benefit is beginner do not need to remember key shortcuts. When, you are in normal mode, pressing `<space>` once will open up a which-key menu.
+Most of the keybindings are set up with the `<leader>` i.e. `<space>` key prefix so that which-key plugin can help us to find the desired key shortcuts. The benefit is beginner do not need to remember key shortcuts. When, you are in normal mode, pressing `<space>` once will open up a which-key menu. And pressing `<space>w` will show the some builtin shortcuts that are available in normal mode.
 
-All the configured custom keymap are listed below:-
+By adding `<space>` prefix, we are increasing the keys to be pressed to trigger the events. So, you can set the keymaps according to your comfort. 
+
+All the configured custom keymap are listed below (Note: Builtin shortcuts of vim and neovim are not included here):-
+
+- `<Ctrl-h>` - Move focus to the left window of current window 
+- `<Ctrl-j>` - Move focus to the below window of current
+- `<Ctrl-k>` - Move focus to the top window of current
+- `<Ctrl-l>` - Move focus to the right window of current
+
+- `<Ctrl-up>` - Resize current window by decreasing its top value 
+- `<Ctrl-down>` - Resize current window by increasing its bottom value
+- `<Ctrl-left>` - Resize current window by decreasing itsleft value
+- `<Ctrl-right>` - Resize current window by increasing its right value
+
+- `<Shift-l>` - Navigate to the next buffer of current buffer 
+- `<Shift-h>` - Navigate to previous buffer of current buffer
+
+- `<Ctrl-c>` - Copy whole file content to clipboard
+- `p` - Paste in visual mode
+
+- `nn` - Enter normal mode from insert and visual mode 
+
+- `<` - Indent left in visual mode
+- `>` - Indent right in visual mode
+
+- `<Alt-j>` - Move current line down in normal, insert and visual mode.
+- `<Alt-k>` - Move current line up in normal, insert and visual mode.
+
+- `<Space>u` - Write the current buffer to disk if there is any change to the file i.e. save the file.
+- `<Space>q` - Write the current buffer to disk and close it.
+
 - Tricky one, for fastwrap provided by nvim-autopairs
 ```
 | Before      | Input                | After       |
@@ -65,4 +95,5 @@ All the configured custom keymap are listed below:-
 | (|foobar    | <Alt-e> then press a | (|foobar)   |
 | (|)(foobar) | <Alt-e> then press q | (|(foobar)) |
 ```
+- 
 
