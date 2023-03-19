@@ -24,6 +24,7 @@ And then press enter..
 - `ripgrep` needs to be available on the system
 
 ## Integrated Plugins
+- [lazy.nvim](https:www.github.com/folke/lazy.nvim)
 - [alpha-nvim] (https://www.github.com/goolord/alpha-nvim)
 - [nvim-autopairs] (https://github.com/windwp/nvim-autopairs)
 - [nvim-ts-autotag] (https://github.com/windwp/nvim-ts-autotag)
@@ -77,7 +78,7 @@ All the configured custom keymap are listed below (Note: Builtin shortcuts of vi
 - `<Ctrl-c>` - Copy whole file content to clipboard
 - `p` - Paste in visual mode
 
-- `ij` - Enter normal mode from insert and visual mode 
+- `ij` - Enter normal mode from insert, terminal and visual mode 
 
 - `<` - Indent left in visual mode
 - `>` - Indent right in visual mode
@@ -87,6 +88,9 @@ All the configured custom keymap are listed below (Note: Builtin shortcuts of vi
 
 - `<Space>u` - Write the current buffer to disk if there is any change to the file i.e. save the file.
 - `<Space>q` - Write the current buffer to disk and close it.
+- `<Alt-n>` - Move to next highlighted word 
+- `<Alt-p>` - Move to previous highlighted word
+
 
 - Tricky one, for fastwrap provided by nvim-autopairs
 ```
@@ -95,5 +99,7 @@ All the configured custom keymap are listed below (Note: Builtin shortcuts of vi
 | (|foobar    | <Alt-e> then press a | (|foobar)   |
 | (|)(foobar) | <Alt-e> then press q | (|(foobar)) |
 ```
-- 
+There are many more that are binded with which-key. After a bit of hitting space key, which-key menu will popup with available key bindings. Shortcuts are also available in `nvim-tree` too. When you are in nvim-tree, just press `?`, and that will show all the available keymaps. 
 
+## Customizing Your Preference
+Mostly, you don't need to change the config folder for plugin related settings. You can add a new plugin by creating a new file in plugins folder. Refer to `lazy.nvim` for more details. The keybindings related to the plugin are in their own plugin file. Open up the specific plugin file and change the keys table as your wish to map shortcuts. 

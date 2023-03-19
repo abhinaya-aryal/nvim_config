@@ -7,77 +7,76 @@ return {
 			},
 		})
 	end,
+	cmd = "Lspsaga",
 	keys = {
 		{
-			"<leader>gf",
+			"<leader>h",
 			"<cmd>Lspsaga lsp_finder<cr>",
-			desc = "Lsp Finder",
+			desc = "Definition",
 		},
 		{
-			"<leader>ga",
+			"<leader>a",
 			"<cmd>Lspsaga code_action<cr>",
 			desc = "Code Actions",
 			mode = { "n", "v" },
 		},
 		{
-			"<leader>gr",
+			"<leader>r",
 			"<cmd>Lspsaga rename<cr>",
 			desc = "Lsp Rename",
 		},
 		{
-			"<leader>gj",
+			"<leader>d",
 			"<cmd>Lspsaga peek_definition<cr>",
 			desc = "Peek Definition",
 		},
 		{
-			"<leader>gg",
+			"<leader>g",
 			"<cmd>Lspsaga goto_definition<cr>",
 			desc = "GoTo Definition",
 		},
 		{
-			"<leader>gd",
+			"<leader>l",
 			"<cmd>Lspsaga show_line_diagnostics<cr>",
 			desc = "Line Diagnostics",
 		},
 		{
-			"<leader>gc",
+			"<leader>c",
 			"<cmd>Lspsaga show_cursor_diagnostics<cr>",
 			desc = "Cursor Diagnostics",
 		},
 		{
-			"<leader>gb",
+			"<leader>b",
 			"<cmd>Lspsaga show_buf_diagnostics<cr>",
 			desc = "Buffer Diagnostics",
 		},
 		{
-			"<leader>gn",
+			"<leader>p",
 			"<cmd>Lspsaga diagnostic_jump_prev<cr>",
-			desc = "Jump to Previous",
+			desc = "Jump to Previous Diagnostics",
 		},
 		{
-			"<leader>gp",
+			"<leader>n",
 			"<cmd>Lspsaga diagnostic_jump_next<cr>",
-			desc = "Jump to Next",
+			desc = "Jump to Next Diagnostics",
 		},
 		{
-			"<leadear>gl",
+			"<leader>o",
 			"<cmd>Lspsaga outline<cr>",
 			desc = "Toggle Outline",
 		},
 		{
-			"<leader>gi",
-			"<cmd>Lspsaga incoming_calls<cr>",
-			desc = "Incoming Calls",
-		},
-		{
-			"<leader>go",
-			"<cmd>Lspsaga outgoing_calls<cr>",
-			desc = "Outgoing Calls",
-		},
-		{
-			"<leader>gk",
+			"<leader>k",
 			"<cmd>Lspsaga hover_doc<cr>",
 			desc = "Hover Doc",
 		},
+		{
+			"<leader>s",
+			"<cmd>Lspsaga peek_type_definition<cr>",
+			desc = "Peek Type Definition",
+		},
+		{ "<leader>v", "<cmd>Lspsaga goto_type_definition<cr>", desc = "Go to Type Definition" },
+
+		{ "<leader>j", "<cmd>Lspsaga term_toggle<cr>", desc = "Floating Terminal" },
 	},
 }

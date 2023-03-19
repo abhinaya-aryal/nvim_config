@@ -1,6 +1,6 @@
 return {
 	"neovim/nvim-lspconfig",
-	event = { "BufAdd", "BufNewFile" },
+	event = { "BufAdd", "BufRead", "BufReadPost", "BufNewFile" },
 	dependencies = {
 		{ "hrsh7th/cmp-nvim-lsp" },
 		{ "williamboman/mason.nvim" },
@@ -17,6 +17,8 @@ return {
 				border = "rounded",
 			},
 		})
+
+		-- INFO: Setting up mason
 		require("mason-lspconfig").setup({
 			ensure_installed = {
 				"cssls",
@@ -28,6 +30,8 @@ return {
 			},
 			automatic_installation = true,
 		})
+
+		-- INFO: Automatic setting up installed lsps from mason
 		require("mason-lspconfig").setup_handlers({
 			function(server_name)
 				require("lspconfig")[server_name].setup({
@@ -69,8 +73,10 @@ return {
 			end,
 		})
 
+		-- INFO: Calling setup function from handler file of config directory
 		require("config.handlers").setup()
 
+		-- INFO: Configuring null_ls for code formatting
 		local null_ls = require("null-ls")
 		local b = null_ls.builtins
 		local function eslint_config_exists()
@@ -116,9 +122,9 @@ return {
 			-- b.diagnostics.misspell,
 			b.code_actions.cspell,
 			-- b.diagnostics.cspell,
-			b.diagnostics.write_good,
-			b.code_actions.proselint,
-			b.formatting.rustywind,
+			-- b.diagnostics.write_good,
+			-- b.code_actions.proselint,
+			-- b.formatting.rustywind,
 			b.code_actions.eslint_d.with({
 				filetype = {
 					"javascript",
@@ -144,17 +150,17 @@ return {
 					return eslint_config_exists() and not rome_config_exists()
 				end,
 			}),
-			b.formatting.deno_fmt.with({
+			--[[ b.formatting.deno_fmt.with({
 				filetypes = { "javascript", "javascriptreact", "json", "jsonc", "typescript", "typescriptreact" },
 				condition = function()
 					return deno_config_exists()
 				end,
-			}),
-			b.formatting.rome.with({
+			}), ]]
+			--[[ b.formatting.rome.with({
 				condition = function()
 					return rome_config_exists() and not eslint_config_exists() and not deno_config_exists()
 				end,
-			}),
+			}), ]]
 			b.formatting.prettierd.with({
 				filetypes = {
 					"javascript",
@@ -172,10 +178,10 @@ return {
 				end,
 			}),
 			b.formatting.stylua,
-			b.formatting.rustfmt,
-			b.formatting.gofmt,
-			b.diagnostics.revive,
-			b.diagnostics.protolint,
+			-- b.formatting.rustfmt,
+			-- b.formatting.gofmt,
+			-- b.diagnostics.revive,
+			-- b.diagnostics.protolint,
 		}
 		null_ls.setup({
 			on_attach = function(client)
@@ -187,7 +193,6 @@ return {
 	end,
 	keys = {
 		{ "<leader>m", "<cmd>Mason<cr>", desc = "Mason" },
-		{ "<leader>l", "<cmd><esc>", desc = "LSP" },
-		{ "<leader>li", "<cmd>LspInfo<cr>", desc = "LspInfo" },
+		{ "<leader>i", "<cmd>LspInfo<cr>", desc = "LspInfo" },
 	},
 }

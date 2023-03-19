@@ -7,13 +7,13 @@ return {
 		{ "hrsh7th/cmp-nvim-lua" },
 		{ "hrsh7th/cmp-nvim-lsp-signature-help" },
 		{ "hrsh7th/cmp-path" }, --path completions
-		{ "hrsh7th/cmp-cmdline" },
 		{ "saadparwaiz1/cmp_luasnip" },
 		{ "tzachar/cmp-tabnine", build = "./install.sh" },
 	},
 	config = function()
 		local snippet = require("luasnip")
 		snippet.filetype_extend("javascriptreact", { "html" })
+		snippet.filetype_extend("typescriptreact", { "html" })
 
 		local check_backspace = function()
 			local col = vim.fn.col(".") - 1
@@ -150,24 +150,6 @@ return {
 			experimental = {
 				ghost_text = true,
 			},
-		})
-		cmp.setup.cmdline("/", {
-			mapping = cmp.mapping.preset.cmdline(),
-			sources = {
-				{ name = "buffer" },
-			},
-		})
-
-		cmp.setup.cmdline(":", {
-			mapping = cmp.mapping.preset.cmdline(),
-			sources = cmp.config.sources({
-				{ name = "path" },
-			}, {
-				name = "cmdline",
-				option = {
-					ignore_cmds = { "Man", "!" },
-				},
-			}),
 		})
 		local cmp_autopairs = require("nvim-autopairs.completion.cmp")
 		cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())

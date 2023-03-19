@@ -1,20 +1,26 @@
 return {
 	"nvim-telescope/telescope.nvim",
 	dependencies = {
-		{ "nvim-lua/plenary.nvim", lazy = true },
+		{ "nvim-lua/plenary.nvim" },
+		{
+			"ahmedkhalf/project.nvim",
+			config = function()
+				require("project_nvim").setup({})
+				require("telescope").load_extension("projects")
+			end,
+		},
 		{
 			"nvim-telescope/telescope-fzf-native.nvim",
 			build = "make",
-			lazy = true,
 			config = function()
 				require("telescope").load_extension("fzf")
 			end,
 		},
 	},
-	event = "VeryLazy",
+	cmd = "Telescope",
 	keys = {
 		{
-			"<leader>f",
+			"<leader>t",
 			"<cmd>Telescope<cr>",
 			desc = "Telescope",
 		},
