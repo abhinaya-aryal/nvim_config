@@ -24,7 +24,7 @@ And then press enter..
 - `ripgrep` needs to be available on the system
 
 ## Integrated Plugins
-- [lazy.nvim](https:www.github.com/folke/lazy.nvim)
+- [lazy.nvim](https://www.github.com/folke/lazy.nvim)
 - [alpha-nvim] (https://www.github.com/goolord/alpha-nvim)
 - [nvim-autopairs] (https://github.com/windwp/nvim-autopairs)
 - [nvim-ts-autotag] (https://github.com/windwp/nvim-ts-autotag)
