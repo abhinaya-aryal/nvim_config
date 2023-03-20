@@ -10,7 +10,7 @@ return {
 			use_treesitter_scope = true,
 			show_current_context = true,
 			filetype_exclude = {
-				-- "help",
+				"help",
 				"packer",
 				"NvimTree",
 				"checkhealth",

@@ -1,20 +1,17 @@
 return {
 	"akinsho/toggleterm.nvim",
-	version = "*",
 	event = "VimEnter",
 	config = function()
 		require("toggleterm").setup({
 			size = 7,
 			open_mapping = [[<c-\>]],
 			hide_numbers = true,
-			shade_terminals = true,
-			shading_factor = 2,
-			start_in_insert = true,
-			persist_size = true,
 			insert_mapping = true,
+			start_in_insert = false,
 			terminal_mappings = true,
 			direction = "horizontal",
 			close_on_exit = true,
+			autochdir = true,
 			shell = vim.o.shell,
 			winbar = {
 				enabled = false,

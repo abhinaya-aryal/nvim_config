@@ -19,8 +19,8 @@ And then press enter..
 ## Fixing Issues
 - On mac, `pbcopy` should be builtin
 - On linux, `wl-clipboard` should be installed (for wayland)
-- Neovim python support `pip install pynvim`
-- Neovim node support `npm i -g neovim` 
+- Neovim python support `pip install pynvim` (0ptional)
+- Neovim node support `npm i -g neovim` (Optional) 
 - `ripgrep` needs to be available on the system
 
 ## Integrated Plugins
@@ -56,7 +56,7 @@ And then press enter..
 - and other required dependencies plugins for these...
 
 ## KeyBindings
-Most of the keybindings are set up with the `<leader>` i.e. `<space>` key prefix so that which-key plugin can help us to find the desired key shortcuts. The benefit is beginner do not need to remember key shortcuts. When, you are in normal mode, pressing `<space>` once will open up a which-key menu. And pressing `<space>w` will show the some builtin shortcuts that are available in normal mode.
+Most of the keybindings are set up with the `<leader>` i.e. `<space>` key prefix so that which-key plugin can help us to find the desired key shortcuts. The benefit is beginner do not need to remember key shortcuts. When, you are in normal mode, pressing `<space>` once will open up a which-key menu. 
 
 By adding `<space>` prefix, we are increasing the keys to be pressed to trigger the events. So, you can set the keymaps according to your comfort. 
 
@@ -67,41 +67,44 @@ All the configured custom keymap are listed below (Note: Builtin shortcuts of vi
 - `<Ctrl-k>` - Move focus to the top window of current
 - `<Ctrl-l>` - Move focus to the right window of current
 
-- `<Ctrl-up>` - Resize current window by decreasing its top value 
+  - `<Ctrl-up>` - Resize current window by decreasing its top value 
 - `<Ctrl-down>` - Resize current window by increasing its bottom value
 - `<Ctrl-left>` - Resize current window by decreasing itsleft value
 - `<Ctrl-right>` - Resize current window by increasing its right value
 
-- `<Shift-l>` - Navigate to the next buffer of current buffer 
+  - `<Shift-l>` - Navigate to the next buffer of current buffer 
 - `<Shift-h>` - Navigate to previous buffer of current buffer
 
-- `<Ctrl-c>` - Copy whole file content to clipboard
+  - `<Ctrl-c>` - Copy whole file content to clipboard
 - `p` - Paste in visual mode
 
-- `ij` - Enter normal mode from insert, terminal and visual mode 
+  - `ij` - Enter normal mode from insert, terminal and visual mode 
 
-- `<` - Indent left in visual mode
+  - `<` - Indent left in visual mode
 - `>` - Indent right in visual mode
 
-- `<Alt-j>` - Move current line down in normal, insert and visual mode.
+  - `<Alt-j>` - Move current line down in normal, insert and visual mode.
 - `<Alt-k>` - Move current line up in normal, insert and visual mode.
 
-- `<Space>u` - Write the current buffer to disk if there is any change to the file i.e. save the file.
+  - `<Space>u` - Write the current buffer to disk if there is any change to the file i.e. save the file.
 - `<Space>q` - Write the current buffer to disk and close it.
-- `<Alt-n>` - Move to next highlighted word 
+
+  - `<Alt-n>` - Move to next highlighted word 
 - `<Alt-p>` - Move to previous highlighted word
-- `gcc` - Toggle linewise comment provided by [Comment.nvim](https://github.com/numToStr/Comment.nvim)
+
+  - `gcc` - Toggle linewise comment provided by [Comment.nvim](https://github.com/numToStr/Comment.nvim)
 - `gbc` - Toggle linewise comment provided by [Comment.nvim](https://github.com/numToStr/Comment.nvim)
   - `<n>gcc` - Toggle <n> = {any number} line with linewise comment. Same for `gbc` too, but the comment syntax will use multi-line or block-wise comment.
 
-
-- Tricky one, for fastwrap provided by nvim-autopairs
+  - Tricky one, for fastwrap provided by nvim-autopairs
 ```
 | Before      | Input                | After       |
 | ----------- | -------------------- | ----------- |
 | (|foobar    | <Alt-e> then press a | (|foobar)   |
 | (|)(foobar) | <Alt-e> then press q | (|(foobar)) |
 ```
+  - `<Ctrl-\>` - Toggle Terminal
+
   There are many more that are binded with which-key. After a bit of hitting space key, which-key menu will popup with available key bindings. Shortcuts are also available in `nvim-tree` too. When you are in nvim-tree, just press `?`, and that will show all the available keymaps. 
 
 ## Customizing Your Preference

@@ -1,23 +1,15 @@
 return {
 	"nvim-telescope/telescope.nvim",
+	event = "VimEnter",
 	dependencies = {
 		{ "nvim-lua/plenary.nvim" },
-		{
-			"ahmedkhalf/project.nvim",
-			config = function()
-				require("project_nvim").setup({})
-				require("telescope").load_extension("projects")
-			end,
-		},
-		{
-			"nvim-telescope/telescope-fzf-native.nvim",
-			build = "make",
-			config = function()
-				require("telescope").load_extension("fzf")
-			end,
-		},
+		{ "ahmedkhalf/project.nvim" },
 	},
-	cmd = "Telescope",
+	config = function()
+		require("telescope").setup({})
+		require("project_nvim").setup({})
+		require("telescope").load_extension("projects")
+	end,
 	keys = {
 		{
 			"<leader>t",
