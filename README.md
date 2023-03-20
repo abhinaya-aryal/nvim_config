@@ -38,7 +38,6 @@ And then press enter..
 - [diffview.nvim](https://github.com/sindrets/diffview.nvim)
 - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
 - [vim-illuminate](https://github.com/RRethy/vim-illuminate)
-- [impatient.nvim](https://github.com/lewis6991/impatient.nvim)
 - [mason.nvim](https://github.com/williamboman/mason.nvim)
 - [null-ls.nvim](https://github.com/jose-elias-alvarez/null-ls.nvim)
 - [lspsaga.nvim](https://github.com/glepnir/lspsaga.nvim)
@@ -67,43 +66,43 @@ All the configured custom keymap are listed below (Note: Builtin shortcuts of vi
 - `<Ctrl-k>` - Move focus to the top window of current
 - `<Ctrl-l>` - Move focus to the right window of current
 
-  - `<Ctrl-up>` - Resize current window by decreasing its top value 
+- `<Ctrl-up>` - Resize current window by decreasing its top value 
 - `<Ctrl-down>` - Resize current window by increasing its bottom value
 - `<Ctrl-left>` - Resize current window by decreasing itsleft value
 - `<Ctrl-right>` - Resize current window by increasing its right value
 
-  - `<Shift-l>` - Navigate to the next buffer of current buffer 
+- `<Shift-l>` - Navigate to the next buffer of current buffer 
 - `<Shift-h>` - Navigate to previous buffer of current buffer
 
-  - `<Ctrl-c>` - Copy whole file content to clipboard
+- `<Ctrl-c>` - Copy whole file content to clipboard
 - `p` - Paste in visual mode
 
-  - `ij` - Enter normal mode from insert, terminal and visual mode 
+- `ij` - Enter normal mode from insert, terminal and visual mode 
 
-  - `<` - Indent left in visual mode
+- `<` - Indent left in visual mode
 - `>` - Indent right in visual mode
 
-  - `<Alt-j>` - Move current line down in normal, insert and visual mode.
+- `<Alt-j>` - Move current line down in normal, insert and visual mode.
 - `<Alt-k>` - Move current line up in normal, insert and visual mode.
 
-  - `<Space>u` - Write the current buffer to disk if there is any change to the file i.e. save the file.
+- `<Space>u` - Write the current buffer to disk if there is any change to the file i.e. save the file.
 - `<Space>q` - Write the current buffer to disk and close it.
 
-  - `<Alt-n>` - Move to next highlighted word 
+- `<Alt-n>` - Move to next highlighted word 
 - `<Alt-p>` - Move to previous highlighted word
 
-  - `gcc` - Toggle linewise comment provided by [Comment.nvim](https://github.com/numToStr/Comment.nvim)
+- `gcc` - Toggle linewise comment provided by [Comment.nvim](https://github.com/numToStr/Comment.nvim)
 - `gbc` - Toggle linewise comment provided by [Comment.nvim](https://github.com/numToStr/Comment.nvim)
-  - `<n>gcc` - Toggle <n> = {any number} line with linewise comment. Same for `gbc` too, but the comment syntax will use multi-line or block-wise comment.
+- `<n>gcc` - Toggle <n> = {any number} line with linewise comment. Same for `gbc` too, but the comment syntax will use multi-line or block-wise comment.
 
-  - Tricky one, for fastwrap provided by nvim-autopairs
+- Tricky one, for fastwrap provided by nvim-autopairs
 ```
 | Before      | Input                | After       |
 | ----------- | -------------------- | ----------- |
 | (|foobar    | <Alt-e> then press a | (|foobar)   |
 | (|)(foobar) | <Alt-e> then press q | (|(foobar)) |
 ```
-  - `<Ctrl-\>` - Toggle Terminal
+- `<Ctrl-\>` - Toggle Terminal
 
   There are many more that are binded with which-key. After a bit of hitting space key, which-key menu will popup with available key bindings. Shortcuts are also available in `nvim-tree` too. When you are in nvim-tree, just press `?`, and that will show all the available keymaps. 
 
