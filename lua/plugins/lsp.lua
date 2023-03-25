@@ -2,7 +2,6 @@ return {
 	"neovim/nvim-lspconfig",
 	event = { "BufAdd", "BufRead", "BufReadPost", "BufNewFile" },
 	dependencies = {
-		{ "hrsh7th/cmp-nvim-lsp" },
 		{ "williamboman/mason.nvim" },
 		{ "williamboman/mason-lspconfig.nvim" },
 		{ "jose-elias-alvarez/null-ls.nvim" },
@@ -150,17 +149,17 @@ return {
 					return eslint_config_exists() and not rome_config_exists()
 				end,
 			}),
-			--[[ b.formatting.deno_fmt.with({
+			b.formatting.deno_fmt.with({
 				filetypes = { "javascript", "javascriptreact", "json", "jsonc", "typescript", "typescriptreact" },
 				condition = function()
 					return deno_config_exists()
 				end,
-			}), ]]
-			--[[ b.formatting.rome.with({
+			}),
+			b.formatting.rome.with({
 				condition = function()
 					return rome_config_exists() and not eslint_config_exists() and not deno_config_exists()
 				end,
-			}), ]]
+			}),
 			b.formatting.prettierd.with({
 				filetypes = {
 					"javascript",

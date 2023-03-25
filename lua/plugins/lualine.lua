@@ -8,7 +8,7 @@ return {
 			sections = { "error", "warn", "info", "hint" },
 			symbols = { error = " ", warn = " ", hint = " ", info = "󰋼 " },
 			colored = true,
-			update_in_insert = true,
+			update_in_insert = false,
 			always_visible = false,
 		}
 
@@ -28,6 +28,7 @@ return {
 			"location",
 			padding = 0,
 		}
+
 		require("lualine").setup({
 			options = {
 				globalstatus = true,
@@ -35,12 +36,13 @@ return {
 				theme = "tokyonight",
 				disabled_filetypes = { "alpha", "dashboard" },
 				always_divisible_middle = true,
+				colored = true,
 			},
 			sections = {
 				lualine_a = { "mode" },
 				lualine_b = { "branch" },
 				lualine_c = { diagnostics },
-				lualine_x = { diff, filetype },
+				lualine_x = { diff, "filesize", filetype },
 				lualine_y = { location },
 				lualine_z = { "progress" },
 			},

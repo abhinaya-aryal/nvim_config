@@ -1,6 +1,6 @@
 return {
 	"nvim-telescope/telescope.nvim",
-	event = "VimEnter",
+	-- event = "VimEnter",
 	dependencies = {
 		{ "nvim-lua/plenary.nvim" },
 		{ "ahmedkhalf/project.nvim" },
@@ -10,6 +10,7 @@ return {
 		require("project_nvim").setup({})
 		require("telescope").load_extension("projects")
 	end,
+	cmd = "Telescope",
 	keys = {
 		{
 			"<leader>t",

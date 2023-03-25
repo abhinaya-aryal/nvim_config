@@ -76,3 +76,15 @@ vim.cmd([[
 filetype plugin indent on
 syntax on 
 ]])
+
+vim.diagnostic.config({
+	virtual_text = false,
+	float = {
+		focusable = true,
+		style = "minimal",
+		border = "rounded",
+		source = "if-many",
+		header = "",
+		prefix = "",
+	},
+})
