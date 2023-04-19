@@ -31,7 +31,6 @@ return {
 				-- lua = true,
 			},
 		})
-
 		local kind_icons = {
 			Text = "",
 			Method = "",

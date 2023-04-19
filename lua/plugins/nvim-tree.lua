@@ -19,7 +19,6 @@ return {
 			system_open = {
 				cmd = "xdg-open",
 			},
-			hijack_unnamed_buffer_when_opening = true,
 			view = {
 				side = "right",
 				signcolumn = "yes",
