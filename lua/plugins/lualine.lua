@@ -33,7 +33,6 @@ return {
 			options = {
 				globalstatus = true,
 				icons_enabled = true,
-				theme = "tokyonight",
 				disabled_filetypes = { "alpha", "dashboard" },
 				always_divisible_middle = true,
 				colored = true,

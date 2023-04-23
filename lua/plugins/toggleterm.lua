@@ -3,7 +3,7 @@ return {
 	event = "VimEnter",
 	config = function()
 		require("toggleterm").setup({
-			size = 7,
+			size = 4,
 			open_mapping = [[<c-\>]],
 			hide_numbers = true,
 			insert_mapping = true,
