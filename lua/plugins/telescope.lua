@@ -47,5 +47,10 @@ return {
 			"<cmd>Telescope commands<cr>",
 			desc = "Find Commands",
 		},
+		{
+			"<leader>fr",
+			"<cmd>Telescope oldfiles<cr>",
+			desc = "Find Recent Files",
+		},
 	},
 }
