@@ -32,12 +32,14 @@ return {
 
 		-- INFO: Automatic setting up installed lsps from mason
 		require("mason-lspconfig").setup_handlers({
+
 			function(server_name)
 				require("lspconfig")[server_name].setup({
 					on_attach = on_attach,
 					capabilities = capabilities,
 				})
 			end,
+
 			["lua_ls"] = function()
 				require("lspconfig").lua_ls.setup({
 					on_attach = on_attach,
@@ -62,10 +64,25 @@ return {
 			end,
 			["jsonls"] = function()
 				require("lspconfig").jsonls.setup({
+					on_attach = on_attach,
+					capabilities = capabilities,
 					settings = {
 						json = {
 							schemas = require("schemastore").json.schemas(),
 							validate = { enable = true },
+						},
+					},
+				})
+			end,
+			["cssls"] = function()
+				require("lspconfig").cssls.setup({
+					on_attach = on_attach,
+					capabilities = capabilities,
+					settings = {
+						css = {
+							lint = {
+								validProperties = { "composes" },
+							},
 						},
 					},
 				})

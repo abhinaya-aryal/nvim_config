@@ -12,7 +12,7 @@ return {
 		{
 			"<leader>h",
 			"<cmd>Lspsaga lsp_finder<cr>",
-			desc = "Definition",
+			desc = "References",
 		},
 		{
 			"<leader>a",

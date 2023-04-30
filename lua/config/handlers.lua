@@ -29,6 +29,9 @@ M.on_attach = function(client, bufnr)
 	if client.name == "sumneko_lua" then
 		client.server_capabilities.documentFormattingProvider = false
 	end
+	--[[ if client.name == "cssmodules_ls" then
+		client.server_capabilities.definitionProvider = false
+	end ]]
 	local illuminate = require("illuminate")
 	illuminate.on_attach(client)
 end
