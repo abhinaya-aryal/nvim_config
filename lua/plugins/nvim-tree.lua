@@ -72,6 +72,7 @@ return {
 			},
 			filters = {
 				dotfiles = true, -- toggle via toggle_dotfiles action, default mapping H.
+				custom = { "node_modules", "yarn.lock" },
 			},
 			on_attach = function(bufnr)
 				local api = require("nvim-tree.api")
