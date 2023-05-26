@@ -14,7 +14,7 @@ return {
 					local icon = level:match("error") and " " or ""
 					return " " .. icon .. count
 				end,
-				separator_style = "padded_slant",
+				-- separator_style = "padded_slant",
 				offsets = {
 					{
 						filetype = "NvimTree",
