@@ -81,7 +81,7 @@ return {
 				end
 				vim.keymap.set("n", ".", api.tree.change_root_to_node, opts("Set Root"))
 				vim.keymap.set("n", "i", api.node.show_info_popup, opts("Info"))
-				vim.keymap.set("n", "<C-r>", api.fs.rename_sub, opts("Rename: Omit Filename"))
+				vim.keymap.set("n", "fr", api.fs.rename_sub, opts("Rename: Omit Filename"))
 				vim.keymap.set("n", "v", api.node.open.vertical, opts("Open: Vertical Split"))
 				vim.keymap.set("n", "s", api.node.open.horizontal, opts("Open: Horizontal Split"))
 				vim.keymap.set("n", "p", api.node.navigate.parent_close, opts("Close Directory"))
