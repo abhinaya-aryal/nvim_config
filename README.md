@@ -1,5 +1,5 @@
 # Config of Neovim
-This is my day to day config of Neovim. Neovim is a great and customizable terminal based editor. All the plugins are set up so that there can be a simple transition from VS-Code to Neovim. I have used lazy plugin for managing other plugin and mason plugin for managing different Lsp.
+This is my day to day config of Neovim. Neovim is a great and customizable terminal based editor. Here, many plugins are set up so that there will be a simple transition from VS-Code like editor to Neovim. I have used [lazy](https://github.com/folke/lazy.nvim) plugin for managing other plugins and [mason](https://github.com/williamboman/mason.nvim) plugin for managing different Lsps.
 
 ## Install Neovim
 You can install a current major version of neovim with your package manager like brew, apt, pacman, etc.
@@ -52,6 +52,7 @@ And then press enter..
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [trouble.nvim](https://github.com/folke/trouble.nvim)
 - [which-key.nvim](https://github.com/folke/which-key.nvim)
+- [zig.vim](https://github.com/ziglang/zig.vim)
 - and other required dependencies plugins for these...
 
 ## KeyBindings
@@ -107,4 +108,4 @@ All the configured custom keymap are listed below (Note: Builtin shortcuts of vi
   There are many more that are binded with which-key. After a bit of hitting space key, which-key menu will popup with available key bindings. Shortcuts are also available in `nvim-tree` too. When you are in nvim-tree, just press `?`, and that will show all the available keymaps. 
 
 ## Customizing Your Preference
-Mostly, you don't need to change the config folder for plugin related settings. You can add a new plugin by creating a new file in plugins folder. Refer to `lazy.nvim` for more details. The keybindings related to the plugin are in their own plugin file. Open up the specific plugin file and change the keys table as your wish to map shortcuts. 
+Mostly, you don't need to change the config folder for plugin related settings. You can add a new plugin by creating a new file in plugins folder. Refer to [`lazy.nvim`](https://github.com/folke/lazy.nvim) for more details. The keybindings related to the plugin are in their own plugin file. Open up the specific plugin file and change the keys table as your wish to map shortcuts. 
